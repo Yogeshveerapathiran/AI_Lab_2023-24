@@ -20,7 +20,6 @@ Step 7: Test the model on the testing data and generate predictions.
 
 Step 8: Evaluate the model performance using metrics like accuracy, confusion matrix, and classification report.
 
-I prefer this response
 ### Program:
 ```py
 !pip install scikit-learn==1.4.2 imbalanced-learn==0.12.2
