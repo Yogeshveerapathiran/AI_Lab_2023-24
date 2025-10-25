@@ -2,7 +2,7 @@
 ### DATE: 25/10/2025                                                                     
 ### REGISTER NUMBER : 212222040185
 ### AIM: 
-To write a program to train the classifier for -----------------.
+To write a program to train the classifier for Weather Condition Prediction using Decision Tree Classifier.
 ###  Algorithm:
 Step 1: Start the program.
 
