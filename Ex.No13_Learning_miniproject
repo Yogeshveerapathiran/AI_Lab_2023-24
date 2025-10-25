@@ -4,10 +4,111 @@
 ### AIM: 
 To write a program to train the classifier for -----------------.
 ###  Algorithm:
+Step 1: Start the program.
 
+Step 2: Import all necessary Python libraries such as pandas, numpy, scikit-learn, plotly, and visualization modules.
+
+Step 3: Load the dataset (for example, seattle-weather.csv) using pd.read_csv().
+
+Step 4: Display the dataset information using data.info() and statistical details using data.describe().
+
+Step 5: Check for missing or null values in the dataset using data.isna().sum().
+
+Step 6: Visualize the dataset to understand weather patterns, such as plotting precipitation over time using Plotly line charts.
+
+Step 7: Encode any categorical features using LabelEncoder() to convert text labels into numeric form.
+
+Step 8: Normalize or scale numerical data using StandardScaler() to ensure uniform feature distribution.
+
+Step 9: Split the dataset into training and testing sets using train_test_split() to evaluate model performance.
+
+Step 10: Handle imbalanced datasets (if present) using SMOTEENN to balance class distributions.
+
+Step 11: Choose a suitable supervised learning classifier such as:
+
+Logistic Regression
+
+Decision Tree Classifier
+
+Random Forest Classifier
+
+Support Vector Machine (SVC)
+
+Step 12: Train the selected model using the training data with the .fit() function.
+
+Step 13: Predict the weather condition (e.g., sunny, rainy, foggy) using the .predict() function.
+
+Step 14: Evaluate the model using performance metrics like:
+
+Confusion Matrix
+
+Classification Report (Accuracy, Precision, Recall, F1-score)
+
+Step 15: Visualize and interpret the results of the model performance.
+
+Step 16: Display the predicted output and performance results.
+
+Step 17: Stop the program.
 ### Program:
+```py
+!pip install scikit-learn==1.4.2 imbalanced-learn==0.12.2
+!pip install catboost
+import pandas as pd
+import numpy as np
+# Visualization
+import plotly.express as px
+import plotly.io as pio
+import plotly.graph_objects as go
+
+# Feature engineering
+from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import StandardScaler
 
 
+# Models (liner models)
+from sklearn.linear_model import LogisticRegression
+from sklearn.linear_model import SGDClassifier
+from sklearn.svm import SVC
+from sklearn.naive_bayes import GaussianNB
+from sklearn.neighbors import KNeighborsClassifier
+
+
+# Models (tree-based models)
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
+from xgboost import XGBClassifier
+from catboost import CatBoostClassifier
+
+# training
+from imblearn.combine import SMOTEENN
+from sklearn.model_selection import train_test_split
+
+
+# Testing
+from sklearn.metrics import classification_report
+from sklearn.metrics import confusion_matrix
+from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import GridSearchCV
+
+
+data = pd.read_csv('/seattle-weather.csv')
+data
+
+data.info()
+
+data.describe()
+
+
+data.isna().sum()
+
+
+graph = px.line(data, x='date', y='precipitation', title='Seattle Weather Precipitation Over Time')
+graph.update_layout(
+    xaxis_title='Date',
+    yaxis_title='Precipitation (inches)',
+    title_x=0.5
+)
+```
 ### Output:
 
 
