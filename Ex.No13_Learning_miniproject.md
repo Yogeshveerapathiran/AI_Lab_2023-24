@@ -6,49 +6,21 @@ To write a program to train the classifier for -----------------.
 ###  Algorithm:
 Step 1: Start the program.
 
-Step 2: Import all necessary Python libraries such as pandas, numpy, scikit-learn, plotly, and visualization modules.
+Step 2: Import the required libraries such as pandas, numpy, scikit-learn, and plotly.
 
-Step 3: Load the dataset (for example, seattle-weather.csv) using pd.read_csv().
+Step 3: Load the weather dataset using pd.read_csv().
 
-Step 4: Display the dataset information using data.info() and statistical details using data.describe().
+Step 4: Perform data preprocessing — handle missing values, encode categorical data, and normalize features.
 
-Step 5: Check for missing or null values in the dataset using data.isna().sum().
+Step 5: Split the dataset into training and testing sets using train_test_split().
 
-Step 6: Visualize the dataset to understand weather patterns, such as plotting precipitation over time using Plotly line charts.
+Step 6: Train the model using the Decision Tree Classifier on the training data.
 
-Step 7: Encode any categorical features using LabelEncoder() to convert text labels into numeric form.
+Step 7: Test the model on the testing data and generate predictions.
 
-Step 8: Normalize or scale numerical data using StandardScaler() to ensure uniform feature distribution.
+Step 8: Evaluate the model performance using metrics like accuracy, confusion matrix, and classification report.
 
-Step 9: Split the dataset into training and testing sets using train_test_split() to evaluate model performance.
-
-Step 10: Handle imbalanced datasets (if present) using SMOTEENN to balance class distributions.
-
-Step 11: Choose a suitable supervised learning classifier such as:
-
-Logistic Regression
-
-Decision Tree Classifier
-
-Random Forest Classifier
-
-Support Vector Machine (SVC)
-
-Step 12: Train the selected model using the training data with the .fit() function.
-
-Step 13: Predict the weather condition (e.g., sunny, rainy, foggy) using the .predict() function.
-
-Step 14: Evaluate the model using performance metrics like:
-
-Confusion Matrix
-
-Classification Report (Accuracy, Precision, Recall, F1-score)
-
-Step 15: Visualize and interpret the results of the model performance.
-
-Step 16: Display the predicted output and performance results.
-
-Step 17: Stop the program.
+I prefer this response
 ### Program:
 ```py
 !pip install scikit-learn==1.4.2 imbalanced-learn==0.12.2
@@ -110,6 +82,10 @@ graph.update_layout(
 )
 ```
 ### Output:
+<img width="852" height="523" alt="Screenshot 2025-10-25 140421" src="https://github.com/user-attachments/assets/01a3c75d-0055-45ce-9aa5-25519e0c6f27" />
+<img width="791" height="717" alt="image" src="https://github.com/user-attachments/assets/528b223d-ef87-4367-90d7-cf6a02c9915c" />
+<img width="1441" height="608" alt="image" src="https://github.com/user-attachments/assets/4f1c8f1a-3b59-41a1-99e9-e0c6c097a140" />
+
 
 
 ### Result:
